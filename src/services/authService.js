@@ -8,7 +8,7 @@ const signupUser = async ({ name, email, password }) => {
     throw error;
   }
 
-  const user = await User.create({ name, email, password });
+  const user = await User.create({ name, email, password ,role: 'admin'});
 
   return {
     id: user._id,
